@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tic_tac_toe</title>
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
   <nav>
-    <ul>
-      <li>MyTicToe.com</li>
-      <li>Home</li>
-      <li>Theme</li>
-      <li>Rules</li>
-    </ul>
-  </nav>
-  <div>
-    <div></div>
-    <div></div>
-  </div>
+    <div id="wname">MyTicTacToe</div>
+    
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
 
-      
+    <div id="nlist">
+      <ul>
+        <li>Home</li>
+        <li onclick="toggleTheme()">Theme</li>
+        <li>Rules</li>
+      </ul>
+    </div>
+  </nav>
+  <script src="app.js"></script>
 </body> 
 </html>

@@ -1,1 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color:black;
+    transition: 0.3s ease-in-out;
+}
+
+nav {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6a0dad, #9c27b0);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 15px 15px;
+}
+
+/* Navbar Brand */
+#wname {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Navbar List */
+#nlist {
+    width: 60%;
+}
+
+#nlist ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#nlist ul li {
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+#nlist ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* 🚀 Responsive Styles */
+.hamburger {
+    font-size: 28px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #nlist {
+        width: 100%;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        background:black;
+        display: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #nlist ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nlist ul li {
+        font-size: 18px;
+        padding: 10px;
+        color:white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Show menu when active */
+    #nlist.active {
+        display: block;
+    }
+    .dark_Mode #nlist ul li:hover{
+        background-color: gray;
+        
+    }
+    .dark_Mode #nlist ul li {
+        color: #FFD700;
+        background-color: white; /* Golden */
+    }
+}
+
+
+/*Styling for dark mode */
+
+.dark_Mode {
+    background-color: black;
+    color: white;
+}
+
+/* Navbar Dark Mode */
+.dark_Mode nav {
+    background-color: #333;
+}
+
+/* List Items Dark Mode */
+.dark_Mode #nlist ul li {
+    color: #FFD700;
+/* Golden */
+}
 
